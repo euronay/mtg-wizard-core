@@ -11,7 +11,7 @@ const Api = require('mtg-wizard-core');
 var cards = await Api.searchCards("lightning bolt");
 ```
 
-Full [Documentation](DOCUMENTATION.md)
+[![Latest Documentation](https://doxdox.org/images/badge-flat.svg)](https://doxdox.org/euronay/mtg-wizard-core)
 
 Read more info on the main repo at https://github.com/euronay/mtg-wizard
 
