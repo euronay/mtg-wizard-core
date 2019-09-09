@@ -1,0 +1,104 @@
+{
+    "object": "card",
+    "id": "9f920e01-6d97-47df-a056-bbd70bcaae26",
+    "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+    "multiverse_ids": [
+        390173
+    ],
+    "name": "Elvish Mystic",
+    "printed_name": "Elfen-Mystiker",
+    "lang": "de",
+    "released_at": "2014-11-07",
+    "uri": "https://api.scryfall.com/cards/9f920e01-6d97-47df-a056-bbd70bcaae26",
+    "scryfall_uri": "https://scryfall.com/card/c14/191/de/elfen-mystiker?utm_source=api",
+    "layout": "normal",
+    "highres_image": false,
+    "image_uris": {
+        "small": "https://img.scryfall.com/cards/small/front/9/f/9f920e01-6d97-47df-a056-bbd70bcaae26.jpg?1561952535",
+        "normal": "https://img.scryfall.com/cards/normal/front/9/f/9f920e01-6d97-47df-a056-bbd70bcaae26.jpg?1561952535",
+        "large": "https://img.scryfall.com/cards/large/front/9/f/9f920e01-6d97-47df-a056-bbd70bcaae26.jpg?1561952535",
+        "png": "https://img.scryfall.com/cards/png/front/9/f/9f920e01-6d97-47df-a056-bbd70bcaae26.png?1561952535",
+        "art_crop": "https://img.scryfall.com/cards/art_crop/front/9/f/9f920e01-6d97-47df-a056-bbd70bcaae26.jpg?1561952535",
+        "border_crop": "https://img.scryfall.com/cards/border_crop/front/9/f/9f920e01-6d97-47df-a056-bbd70bcaae26.jpg?1561952535"
+    },
+    "mana_cost": "{G}",
+    "cmc": 1.0,
+    "type_line": "Creature — Elf Druid",
+    "printed_type_line": "Kreatur — Elf, Druide",
+    "oracle_text": "{T}: Add {G}.",
+    "printed_text": "{T}: Erhöhe deinen Manavorrat um {G}.",
+    "power": "1",
+    "toughness": "1",
+    "colors": [
+        "G"
+    ],
+    "color_identity": [
+        "G"
+    ],
+    "legalities": {
+        "standard": "not_legal",
+        "future": "not_legal",
+        "modern": "legal",
+        "legacy": "legal",
+        "pauper": "legal",
+        "vintage": "legal",
+        "penny": "not_legal",
+        "commander": "legal",
+        "brawl": "not_legal",
+        "duel": "legal",
+        "oldschool": "not_legal"
+    },
+    "games": [
+        "mtgo",
+        "paper"
+    ],
+    "reserved": false,
+    "foil": false,
+    "nonfoil": true,
+    "oversized": false,
+    "promo": false,
+    "reprint": true,
+    "variation": false,
+    "set": "c14",
+    "set_name": "Commander 2014",
+    "set_type": "commander",
+    "set_uri": "https://api.scryfall.com/sets/0980a6e2-eb78-4ad2-8396-cef08fce365e",
+    "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ac14&unique=prints",
+    "scryfall_set_uri": "https://scryfall.com/sets/c14?utm_source=api",
+    "rulings_uri": "https://api.scryfall.com/cards/9f920e01-6d97-47df-a056-bbd70bcaae26/rulings",
+    "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A3f3b2c10-21f8-4e13-be83-4ef3fa36e123&unique=prints",
+    "collector_number": "191",
+    "digital": false,
+    "rarity": "common",
+    "flavor_text": "„Das Leben wächst überall. Mein Volk findet nur die Stellen, an denen es am stärksten wächst.\" —Nissa Revane",
+    "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+    "artist": "Wesley Burt",
+    "artist_ids": [
+        "b98c9d94-8bdb-49af-871d-7bac92274535"
+    ],
+    "illustration_id": "0b73ebfd-efc5-4bea-9974-1a5b82066482",
+    "border_color": "black",
+    "frame": "2015",
+    "full_art": false,
+    "textless": false,
+    "booster": false,
+    "story_spotlight": false,
+    "edhrec_rank": 102,
+    "prices": {
+        "usd": null,
+        "usd_foil": null,
+        "eur": null,
+        "tix": null
+    },
+    "related_uris": {
+        "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=390173&printed=true",
+        "tcgplayer_decks": "https://decks.tcgplayer.com/magic/deck/search?contains=Elvish+Mystic&page=1&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+        "edhrec": "https://edhrec.com/route/?cc=Elvish+Mystic",
+        "mtgtop8": "https://mtgtop8.com/search?MD_check=1&SB_check=1&cards=Elvish+Mystic"
+    },
+    "purchase_uris": {
+        "tcgplayer": "https://shop.tcgplayer.com/productcatalog/product/show?ProductName=Elvish+Mystic&partner=Scryfall&utm_campaign=affiliate&utm_medium=scryfall&utm_source=scryfall",
+        "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Search?referrer=scryfall&searchString=Elvish+Mystic&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+        "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Elvish+Mystic&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+    }
+}
