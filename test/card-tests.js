@@ -7,11 +7,16 @@ const chandraData = require('./data/chandra.json');
 const wearTearData = require('./data/wear-tear.json');
 const nissaData = require('./data/nissa.json');
 const elfenMystikerData = require('./data/elfen-mystiker.json');
+const beanstalkGiantData = require('./data/beanstalk-giant.json');
 
 
 describe('normal card', () => {
     describe('chandra', () => {
         var chandra = new Card(chandraData);
+
+        it('should have the card id', () => {
+            assert.equal(chandra.id, "49fdd0d3-7140-4c12-a41c-37eedd986d9e");
+        });
         it('should have correct oracle name', () => {
             assert.equal(chandra.oracleName, "Chandra, Flamecaller");
         });
@@ -43,6 +48,10 @@ describe('normal card', () => {
 
     describe('scavageng ooze', () => {
         var scavengingOoze = new Card(scavengingOozeData);
+
+        it('should have the card id', () => {
+            assert.equal(scavengingOoze.id, "614d466e-f830-4a2f-8740-b416a15c67dd");
+        });
         it('should have correct oracle name', () => {
             assert.equal(scavengingOoze.oracleName, "Scavenging Ooze");
         });
@@ -77,6 +86,9 @@ describe('split card', () => {
     describe('wear // tear', () => {
         var wearTear = new Card(wearTearData);
 
+        it('should have the card id', () => {
+            assert.equal(wearTear.id, "d169a3b2-18ae-4414-98ef-d879676fdcc0");
+        });
         it('should have correct oracle name', () => {
             assert.equal(wearTear.oracleName, "Wear // Tear");
         });
@@ -112,6 +124,9 @@ describe('dual card', () => {
     var nissa = new Card(nissaData);
 
     describe('nissa, vastwood seer', () => {
+        it('should have the card id', () => {
+            assert.equal(nissa.id, "ff0063da-ab6b-499d-8e87-8b34d46f0372");
+        });
         it('should not have flipped card object', () => {
             assert.equal(nissa.currentFace, 0);
         });
@@ -151,6 +166,9 @@ describe('dual card', () => {
     nissa2.flip();
 
     describe('nissa, sage animist', () => {
+        it('should have the card id', () => {
+            assert.equal(nissa2.id, "ff0063da-ab6b-499d-8e87-8b34d46f0372");
+        });
         it('should have flipped card object', () => {
             assert.equal(nissa2.currentFace, 1);
         });
@@ -190,6 +208,9 @@ describe('foreign language card', () => {
 
         var elfenMystiker = new Card(elfenMystikerData);
 
+        it('should have the card id', () => {
+            assert.equal(elfenMystiker.id, "9f920e01-6d97-47df-a056-bbd70bcaae26");
+        });
         it('should have correct oracle name', () => {
             assert.equal(elfenMystiker.oracleName, "Elvish Mystic");
         });
@@ -219,6 +240,46 @@ describe('foreign language card', () => {
         });
         it('should have correct image', () => {
             assert.equal(elfenMystiker.image, "https://img.scryfall.com/cards/large/front/9/f/9f920e01-6d97-47df-a056-bbd70bcaae26.jpg?1561952535");
+        });
+    });
+});
+
+describe('adventure card', () => {
+    describe('beanstalk giant', () => {
+        var beanstalkGiant = new Card(beanstalkGiantData);
+
+        it('should have the card id', () => {
+            assert.equal(beanstalkGiant.id, "49875f7a-31b9-4276-b971-8ead1e18fc81");
+        });
+        it('should have correct oracle name', () => {
+            assert.equal(beanstalkGiant.oracleName, "Beanstalk Giant // Fertile Footsteps");
+        });
+        it('should have correct printed name', () => {
+            assert.equal(beanstalkGiant.name, "Beanstalk Giant // Fertile Footsteps");
+        });
+        it('should have correct set', () => {
+            assert.equal(beanstalkGiant.set, "CELD");
+        });
+        it('should have correct set and rarity', () => {
+            assert.equal(beanstalkGiant.setAndRarity, "ELD Collector Boosters - Uncommon");
+        });
+        it('should have correct mana cost', () => {
+            assert.equal(beanstalkGiant.manaCost, "{6}{G} // {2}{G}");
+        });
+        it('should have correct mana cost and type', () => {
+            assert.equal(beanstalkGiant.manaCostAndType, "{6}{G} Creature — Giant // {2}{G} Sorcery — Adventure");
+        });
+        it('should have correct body text', () => {
+            assert.equal(beanstalkGiant.bodyText,"**Beanstalk Giant**\n  \nBeanstalk Giant's power and toughness are each equal to the number of lands you control.\n  \n  \n**Fertile Footsteps**\n  \nSearch your library for a basic land card, put it onto the battlefield, then shuffle your library. (Then exile this card. You may cast the creature later from exile.)")
+        });
+        it('should have correct oracle text', () => {
+            assert.equal(beanstalkGiant.oracleText,"**Beanstalk Giant**\n  \nBeanstalk Giant's power and toughness are each equal to the number of lands you control.\n  \n  \n**Fertile Footsteps**\n  \nSearch your library for a basic land card, put it onto the battlefield, then shuffle your library. (Then exile this card. You may cast the creature later from exile.)")
+        });
+        it('should have correct prices', () => {
+            assert.equal(beanstalkGiant.prices.usd, null);
+        });
+        it('should have correct image', () => {
+            assert.equal(beanstalkGiant.image, "https://img.scryfall.com/cards/large/front/4/9/49875f7a-31b9-4276-b971-8ead1e18fc81.jpg?1567701181");
         });
     });
 });

@@ -1,6 +1,6 @@
 {
   "name": "mtg-wizard-core",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0-beta2",
   "author": "James Nayor <jamesnaylor85@gmail.com> (http://jamesnaylor.dev)",
   "description": "Core Functions for MTG Wizard",
   "license": "MIT",

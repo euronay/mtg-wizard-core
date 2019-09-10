@@ -33,6 +33,15 @@ class Card {
     }
 
     /**
+     * The scryfall card ID
+     * @readonly
+     * @type {string}
+     */
+    get id(){
+        return this.data.id;
+    }
+
+    /**
      * The printed name of the card. This is as the name is printed on the card so this will be
      * the name in a foreign language etc
      * @readonly
@@ -146,7 +155,7 @@ class Card {
     
     manaCostAndTypeInternal(oracle){
         
-        if(this.data.layout === "split" || this.data.layout === "flip"){
+        if(this.isSplitCard){
             return `${this.data.card_faces[0].mana_cost} ${this.data.card_faces[0].type_line} // ${this.data.card_faces[1].mana_cost} ${this.data.card_faces[1].type_line}`;
         }
 
@@ -184,7 +193,7 @@ class Card {
         // TODO this and the oracle text function are way too similar. Refactor into one.
         // The problem is that usually a card will just have oracle text, but if it's a foreign language card
         // we need to option to display the printed text OR the oracle text
-        if(this.data.layout === "split" || this.data.layout === "flip"){
+        if(this.isSplitCard){
             return `**${this.data.card_faces[0].name}**\n  \n${this.fixLineBreaks(this.data.card_faces[0].printed_text || this.data.card_faces[0].oracle_text)}\n  \n  \n` + 
                `**${this.data.card_faces[1].name}**\n  \n${this.fixLineBreaks(this.data.card_faces[1].printed_text || this.data.card_faces[1].oracle_text)}`;
         }
@@ -202,7 +211,7 @@ class Card {
      */
     get oracleText(){
         
-        if(this.data.layout === "split" || this.data.layout === "flip"){
+        if(this.isSplitCard){
             return `**${this.data.card_faces[0].name}**\n  \n${this.fixLineBreaks(this.data.card_faces[0].oracle_text)}\n  \n  \n` + 
                `**${this.data.card_faces[1].name}**\n  \n${this.fixLineBreaks(this.data.card_faces[1].oracle_text)}`;
         }
@@ -247,14 +256,35 @@ class Card {
     /**
      * Gets the current face of a card in the case of it being a DFC,
      * Otherwise it will just give you the data.
+     * @readonly
+     * @type {object}
      */
     get safeData()
     {
         let data = this.data;
-        if(this.data.layout === "transform"){
+        if(this.isDFC){
             data = this.data.card_faces[this.currentFace];
         }
         return data;
+    }
+
+    /**
+     * Gets whether the card is equivalent to a "split" card having two parts on the same card. For example, 
+     * "Split", "Aftermath", "Adventure". This is not the same as a DFC.
+     * @readonly
+     * @type {boolean}
+     */
+    get isSplitCard(){
+        return (this.data.layout === "split" || this.data.layout === "flip" || this.data.layout === "adventure")
+    }
+
+    /**
+     * Gets whether the card is a double-face card having two sides printed.
+     * @readonly
+     * @type {boolean}
+     */
+    get isDFC(){
+        return this.data.layout === "transform";
     }
 
     fixLineBreaks(value){
